@@ -12,10 +12,11 @@
     "@next/font": "13.1.1",
     "bootstrap": "^5.3.0-alpha1",
     "bootstrap-icons": "^1.10.3",
+    "flag-icons": "^6.6.6",
     "next": "13.1.1",
-    "rc-rate": "^2.9.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-multi-carousel": "^2.8.2"
+    "react-multi-carousel": "^2.8.2",
+    "rsuite": "^5.24.0"
   }
 }

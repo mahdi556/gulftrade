@@ -7,8 +7,7 @@
  .imgWrapper {
    border: solid #eee 2px;
    border-radius: 5px;
-   margin-right: 20px;
-   margin-left: 20px;
+   margin-right: 30px;
    position: relative;
    width: 200px;
    height: 200px;
@@ -16,4 +15,15 @@
  }
  .imgWrapper:hover{
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+ }
+ .flag{
+  font-size: 12px;
+ }
+ .proName{
+  font-size: 16px;
+  color: #00a9ea;
+ }
+ .proRate{
+  font-size: 14px;
+  color: #00a9ea;
  }
