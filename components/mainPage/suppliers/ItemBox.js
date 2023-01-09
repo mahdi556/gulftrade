@@ -7,6 +7,7 @@ import { Rate } from "rsuite";
 
 const ItemBox = () => {
   return (
+    
     <>
       <div className={styles.imgWrapper}>
         <Image
