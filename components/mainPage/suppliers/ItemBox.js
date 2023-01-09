@@ -31,7 +31,7 @@ const ItemBox = () => {
             }}
             color="blue"
           />
-          <h6 className={`${styles.proRate} ms-3`}>(4.6)</h6>
+          <h6 className={`${styles.proRate} ms-1`}>(4.6)</h6>
         </div>
         <div className="d-flex ">
           <span className={`fi fi-gr ${styles.flag}`} ></span>
