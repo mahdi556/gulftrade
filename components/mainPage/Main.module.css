@@ -38,3 +38,22 @@
 .section {
   border: solid 2px #ccc;
 }
+.fs30 {
+  font-size: 20px;
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6c6c6c;
+  border-radius: 50%;
+  text-align: center;
+  width: 33px;
+  height: 33px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.social:hover{
+  background-color: #8c8c8c;
+
+}

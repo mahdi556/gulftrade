@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import '../styles/globals.css'
 import { useEffect } from 'react'
+import "@fortawesome/fontawesome-svg-core/styles.css"; 
+import { config } from "@fortawesome/fontawesome-svg-core";
 
 export default function App({ Component, pageProps }) {
   useEffect(()=>{
