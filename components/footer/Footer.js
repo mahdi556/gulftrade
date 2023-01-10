@@ -13,7 +13,7 @@ const Footer = () => {
     <>
       <div className="d-flex flex-column align-items-center bg-body-secondary  mb-2">
         <div className="d-flex mt-3">
-          |
+         
           <Link href="#" className="ms-1 me-3">
             About US
           </Link>
