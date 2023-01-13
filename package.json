@@ -19,7 +19,10 @@
     "flag-icons": "^6.6.6",
     "next": "13.1.1",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "18.2.0",
+    "react-google-recaptcha": "^2.1.0",
+    "react-modal": "^3.16.1",
     "react-multi-carousel": "^2.8.2",
     "rsuite": "^5.24.0"
   }

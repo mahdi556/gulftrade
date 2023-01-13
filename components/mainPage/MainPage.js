@@ -13,7 +13,7 @@ const MainPage = () => {
         <Buyers />
       </div>
       <div className={`${styles.section}`}>
-        <Suppliers />
+        {/* <Suppliers /> */}
         <Buyers />
       </div>
       <div className={`${styles.section}`}>

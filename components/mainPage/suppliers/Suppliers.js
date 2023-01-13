@@ -26,27 +26,27 @@ const responsive = {
 const Suppliers = () => {
     return (
         <>
-            <div className='d-flex flex-column mt-3 m-4'>
-                <div className='d-flex align-items-end'>
-                    <h3>Food and Agricultural Product Suppliers</h3>
-                    <h5 className='text-success ms-3'>See more</h5>
+            <div className='d-flex flex-column mt-3 m-4  '
+            style={{
+                // overflowX:'hidden'
+            }}>
+                <div className={`d-flex align-items-center ${styles.catergoryTitleContainer} `}>
+                    <span className={styles.catergoryTitle}>Food and Agricultural Product Suppliers</span>
+                    <span className={styles.seeMore}>See more</span>
                 </div>
-                <hr style={{
-                    width: "100%",
-                    height: 3
-                }} />
                 <Carousel
                     additionalTransfrom={0}
                     arrows
                     autoPlaySpeed={3000}
                     centerMode={false}
-                    className=""
-                    containerClass=""
                     dotListClass=""
                     draggable
                     focusOnSelect={false}
                     infinite
-                    itemClass=""
+                    className={styles.caresoul0}
+                    containerClass={styles.caresoul1}
+                    itemClass={styles.caresoul2}
+                    sliderClass={styles.caresoul3}
                     keyBoardControl
                     minimumTouchDrag={80}
                     partialVisible
@@ -85,7 +85,6 @@ const Suppliers = () => {
                     rtl={false}
                     shouldResetAutoplay
                     showDots={false}
-                    sliderClass=""
                     slidesToSlide={1}
                     swipeable
                 >
@@ -99,6 +98,7 @@ const Suppliers = () => {
                     <div><ItemBox /></div>
                     <div><ItemBox /></div>
                 </Carousel>
+ 
             </div>
 
         </>

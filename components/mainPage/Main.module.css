@@ -19,6 +19,7 @@
 }
 .flag {
   font-size: 12px;
+  z-index: -1 !important;
 }
 .flagList {
   font-size: 14px;
@@ -28,12 +29,39 @@
   color: #00a9ea;
 }
 .proRate {
-  font-size: 14px;
+  font-size: 15px;
   color: #00a9ea;
+  font-weight: 300;
 }
 .verified {
   color: #0dbd06;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+}
+.verifiedIcon {
+  color: #090;
+  font-size: 13px;
+  text-align: center;
+}
+.questionCircle {
+  font-size: 12px;
+}
+.buyerSubtitle {
+  font-weight: bold;
+  max-width: 82%;
+  color: #333;
+  word-break: break-all;
   font-size: 15px;
+}
+.buyerDate {
+  color: #333;
+  font-size: 13px;
+}
+.buyerContent {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.5em;
 }
 .section {
   border: solid 2px #ccc;
@@ -53,7 +81,116 @@
   margin-left: 10px;
   cursor: pointer;
 }
-.social:hover{
+.social:hover {
   background-color: #8c8c8c;
+}
+.catergoryTitle {
+  color: #333;
+  font-size: 23px;
+  font-weight: 400;
+}
+.catergoryTitleContainer {
+  margin-bottom: 12px;
+  border-bottom: solid 1px #d8d8d8;
+}
+.seeMore {
+  font-size: 15px;
+  color: #629c44;
+  font-weight: bold;
+  padding-left: 8px;
+}
 
+.tooltipBox {
+  position: absolute;
+  top:90%;
+  right: 10%;
+  max-width: 300px;
+  z-index:800 !important;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 13%);
+  transition: max-height 0.7s ease-in;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+  transition-property: max-height;
+  text-align: center;
+  min-width: 251px;
+  background-color: #fff;
+  border: #ccc 1px solid;
+  border-radius: 4px;
+}
+.caresoul0 {
+  overflow:visible !important;
+}
+.trustScoreContainer{
+
+  background-color: #f6f6f6;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border-bottom-left-radius: 110px 10px;
+  border-bottom-right-radius: 110px 10px;
+}
+.trustScoreBox {
+  padding: 8px 15px;
+  line-height: 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+}
+.trustScoreText {
+  color: goldenrod;
+  font-size: 13px;
+  font-weight: 500;
+}
+.trustScore {
+  font-size: 28px;
+  color: #666;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.trustScorePoint {
+  color: goldenrod;
+}
+.siteBtn {
+  background: #00a9ea !important;
+  color: #fff;
+  outline: none !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  font-size: 0.8rem;
+}
+.siteBtn:hover{
+  color: #fff;
+}
+.seeReviewsLink {
+  font-size: 12px;
+  font-weight: 500;
+  /* margin-top: 10px; */
+}
+.sellerAchievmentContainer {
+  border-top: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.sellerAchievementsTitle {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.sellerAchives {
+  font-size: 13px;
+  color: #333;
+}
+.gly {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

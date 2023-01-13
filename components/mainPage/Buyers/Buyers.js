@@ -11,16 +11,14 @@ const Buyers = () => {
   return (
     <>
       <div className="d-flex flex-column mt-5 m-4">
-        <div className="d-flex align-items-end">
-          <h3>Food and Agricultural Product Buyers</h3>
-          <h5 className="text-success ms-3">See more</h5>
+        <div
+          className={`d-flex align-items-center ${styles.catergoryTitleContainer} `}
+        >
+          <span className={styles.catergoryTitle}>
+            Food and Agricultural Product Buyers
+          </span>
+          <span className={styles.seeMore}>See more</span>
         </div>
-        <hr
-          style={{
-            width: "100%",
-            height: 3,
-          }}
-        />
         <div className="row row-cols-2 gx-5 px-3">
           <div className="d-flex flex-column  ">
             <Item />
