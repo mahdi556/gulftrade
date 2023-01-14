@@ -4,11 +4,8 @@ import slider1 from "../../../public/images/slider2.webp";
 import styles from "../../mainPage/Main.module.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { Rate } from "rsuite";
-import Link from "next/link";
 import TooltipBox from "./TooltipBox";
 import { useEffect, useRef, useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 
 const ItemBox = () => {
   const [modalIsOpen, setIsOpen] = useState(false);

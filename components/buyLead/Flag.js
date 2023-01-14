@@ -1,7 +1,7 @@
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import styles from "components/mainPage/Main.module.css";
 
-const Flag = ({fl,country}) => {
+const Flag = ({ fl, country }) => {
   return (
     <>
       <div className="d-flex align-items-center ">

@@ -17,6 +17,9 @@ import {
 import Description from "./Description";
 import Link from "next/link";
 import Contact from "./Contact";
+import SellerResponse from "./SellerResponse";
+import BePremium from "./BePremium";
+import SimilarWanted from "./SimilarWanted";
 
 const BuyLead = () => {
   return (
@@ -91,6 +94,29 @@ const BuyLead = () => {
                   File a complaint
                 </Link>
               </div>
+              <SellerResponse />
+              <div className={`text-right siteBlue fs-6 mt-2 `}>
+                This lead has received 1 more responses
+              </div>
+              <BePremium />
+              <div className={`text-right siteBlue fs-6 mt-4 `}>
+                <Link href="#">Buyer Of Artificial Jewellery</Link>{" "}
+              </div>
+              <div className="row">
+                <h4
+                  className="text-black "
+                  style={{
+                    fontSize: 18,
+                  }}
+                >
+                  More Items Similiar to: Wanted : Imitation Jewellery
+                </h4>
+              </div>
+              <SimilarWanted />
+              <SimilarWanted />
+              <SimilarWanted />
+              <SimilarWanted />
+              <SimilarWanted />
             </div>
           </div>
         </div>
