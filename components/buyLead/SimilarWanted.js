@@ -8,7 +8,7 @@ const SimilarWanted = () => {
   return (
     <>
       <div className={`mb-4 px-3 py-2 ${styles.similarContainer}`}>
-        <div className={`d-flex      borderBottom`}>
+        <div className={`d-flex borderBottom`}>
           <div className="d-flex col-6 ms-auto me-5 justify-content-between">
             <Verified />
             <span className={styles.similarDate}>Dec-28-22</span>
@@ -17,7 +17,7 @@ const SimilarWanted = () => {
         <div className="ms-3">
           <div className="row">
             <div className="d-flex align-items-center ">
-              <span className={`fi fi-ae  `}></span>
+              <span className={`fi fi-ae `}></span>
               <Link href="#">
                 <h2
                   className={`ms-2 ${styles.similarItemTitle}`}
@@ -43,32 +43,34 @@ const SimilarWanted = () => {
               for suppliers from : Worldwide Contact : Chingwan
             </p>
           </div>
-          <div className="d-flex mt-3">
-            <Link href="#">Buyer Of Medical Gloves</Link>
+          <div className="d-flex mt-3 ">
+            <Link href="#" className="siteBlue">Buyer Of Medical Gloves</Link>
             <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-            <Link href="#">Nitrile Disposable Gloves</Link>
+            <Link href="#" className="siteBlue">Nitrile Disposable Gloves</Link>
           </div>
-          <div className="d-flex mt-4 fs15">
-            <Link href="#">
+          <div className="d-flex mt-4 fs15 fw-400 siteBlue">
+            <Link href="#" >
               <FontAwesomeIcon
                 className="me-1"
                 icon={faEnvelope}
                 style={{ fontSize: 16, color: "#090" }}
               />
-              Inqure Now
+              <span className="fs15 fw-400 siteBlue">Inqure Now</span>
+              
             </Link>
             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-            <Link href="#">
+            <Link href="#" >
               <FontAwesomeIcon
                 className="me-1"
                 icon={faHeart}
                 style={{ fontSize: 16, color: "#090" }}
               />
-              Add to Favorites
-            </Link>
+              <span className="fs15 fw-400 siteBlue"> Add to Favorites</span>
+             </Link>
           </div>
         </div>
       </div>
+           
     </>
   );
 };

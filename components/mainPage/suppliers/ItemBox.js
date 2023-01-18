@@ -6,6 +6,7 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { Rate } from "rsuite";
 import TooltipBox from "./TooltipBox";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const ItemBox = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -30,6 +31,8 @@ const ItemBox = () => {
       <div className="position-relative " onMouseLeave={() => setIsOpen(false)}>
         {modalIsOpen && <TooltipBox />}
         <div className={styles.imgWrapper}>
+          <Link href="/member">
+
           <Image
             src={slider1}
             style={{
@@ -37,11 +40,14 @@ const ItemBox = () => {
             }}
             fill={true}
           />
+          </Link>
         </div>
         <div className="d-flex flex-column mt-2">
-          <div>
-            <h5 className={`${styles.proName}`}>Apple</h5>
-          </div>
+          <Link href="/member">
+            <div>
+              <h5 className={`${styles.proName}`}>Apple</h5>
+            </div>
+          </Link>
           <div
             className="d-flex align-items-start mt-3 "
             onMouseEnter={() => setIsOpen(true)}

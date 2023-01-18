@@ -1,27 +1,7 @@
-import Image from 'next/image'
 import styles from '../../mainPage/Main.module.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ItemBox from './ItemBox';
-
-const responsive = {
-    desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 6,
-        slidesToSlide: 2 // optional, default to 1.
-    },
-    tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 2,
-        slidesToSlide: 2 // optional, default to 1.
-    },
-    mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1,
-        slidesToSlide: 1 // optional, default to 1.
-    }
-};
-
 
 const Suppliers = () => {
     return (
@@ -39,14 +19,14 @@ const Suppliers = () => {
                     arrows
                     autoPlaySpeed={3000}
                     centerMode={false}
-                    dotListClass=""
+                    dotListClassName=""
                     draggable
                     focusOnSelect={false}
                     infinite
                     className={styles.caresoul0}
-                    containerClass={styles.caresoul1}
-                    itemClass={styles.caresoul2}
-                    sliderClass={styles.caresoul3}
+                    containerClassName={styles.caresoul1}
+                    itemClassName={styles.caresoul2}
+                    sliderClassName={styles.caresoul3}
                     keyBoardControl
                     minimumTouchDrag={80}
                     partialVisible

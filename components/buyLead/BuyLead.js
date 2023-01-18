@@ -14,19 +14,20 @@ import {
   faThumbsUp,
   faUsd,
 } from "@fortawesome/free-solid-svg-icons";
-import Description from "./Description";
+import Description from "components/buyLead/Description";
 import Link from "next/link";
-import Contact from "./Contact";
-import SellerResponse from "./SellerResponse";
-import BePremium from "./BePremium";
-import SimilarWanted from "./SimilarWanted";
+import Contact from "components/buyLead/Contact";
+import SellerResponse from "components/buyLead/SellerResponse";
+import BePremium from "components/buyLead/BePremium";
+import SimilarWanted from "components/buyLead/SimilarWanted";
+import Like from "./Like";
 
 const BuyLead = () => {
   return (
     <>
       <div className="row col-12">
-        <div className="col-8">
-          <div className="col-10 ms-auto">
+        <div className="col-9">
+          <div className="col-10 pe-5 ms-auto">
             <div className="d-flex flex-column ">
               <h1 className={`text-center ${styles.proRate} my-3 ms-1`}>
                 Wanted: Wheat Flour
@@ -72,37 +73,16 @@ const BuyLead = () => {
                 />
               </div>
               <Description />
-              <div
-                className={`d-flex justify-content-end mt-2 pb-3 ${styles.rate}`}
-              >
-                <Link href="#">
-                  {" "}
-                  <FontAwesomeIcon
-                    className="me-1"
-                    icon={faThumbsUp}
-                    style={{ fontSize: 15, color: "#090" }}
-                  />
-                  Rate This Member
-                </Link>
-                <Link href="#" className="ms-3">
-                  {" "}
-                  <FontAwesomeIcon
-                    className="me-1"
-                    icon={faThumbsDown}
-                    style={{ fontSize: 15, color: "#a94442" }}
-                  />
-                  File a complaint
-                </Link>
-              </div>
+              <Like />
               <SellerResponse />
               <div className={`text-right siteBlue fs-6 mt-2 `}>
                 This lead has received 1 more responses
               </div>
               <BePremium />
-              <div className={`text-right siteBlue fs-6 mt-4 `}>
+              <div className={`text-right siteBlue fs-6 my-4 `}>
                 <Link href="#">Buyer Of Artificial Jewellery</Link>{" "}
               </div>
-              <div className="row">
+              <div className="row mt-5">
                 <h4
                   className="text-black "
                   style={{
@@ -117,10 +97,16 @@ const BuyLead = () => {
               <SimilarWanted />
               <SimilarWanted />
               <SimilarWanted />
+              <div className="row mt-2 mb-5">
+                <Link href="#" className="siteBlue">
+                  Search More Like "Wanted : Gloves Like Leather, Nitrile
+                  Gloves"
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-3">
           <Contact />
         </div>
       </div>

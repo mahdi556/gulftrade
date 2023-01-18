@@ -1,0 +1,65 @@
+.proRate {
+  font-size: 13px;
+  color: #00a9ea;
+  font-weight: 300;
+}
+.companyTitle {
+  font-size: 22px;
+  color: #00a9ea;
+  font-weight: 300;
+  line-height: 2.5rem;
+}
+.topSection {
+  border-top: solid 1px #d8d8d8;
+}
+.bottomSection {
+  border-bottom: solid 1px  #aaa0a0;
+}
+.goldLine {
+  border-top: solid 1px goldenrod;
+}
+.goldMember {
+  color: goldenrod;
+  font-size: 14px;
+  font-weight: 400;
+}
+.supplierFrom {
+  font-size: 15px;
+  color: #333;
+}
+.tabBtn {
+  background-color: #e4b849;
+  color: #fff;
+  border-radius: 2px;
+}
+.tabBtn:hover {
+  background-color: #e4b849;
+  border-bottom: #00a9ea 0px solid;
+  color: #fff;
+}
+.tabBtnActive:hover {
+  background-color: #e4b849;
+  border-bottom: #00a9ea 2px solid;
+  color: #fff;
+}
+.tabBtnActive {
+  background-color: #e4b849;
+  border-bottom: #00a9ea 2px solid;
+  color: #fff;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  
+}
+ 
+.h2Title {
+  font-weight: 100;
+  color: #00a9ea;
+  font-size: 20px;
+}
+.companyDiscription {
+  word-wrap: break-word;
+  text-align: left;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4rem;
+}

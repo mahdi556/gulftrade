@@ -1,12 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import MainPage from "../components/mainPage/MainPage";
-// import styles from '../styles/Home.module.css'
-
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+import Dashboard from "components/user/Dashboard";
+import SearchBar from "components/search/SearchBar";
+export default function User() {
   return (
     <>
       <Head>
@@ -15,10 +10,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <MainPage />
-      </main>
+      <SearchBar />
+      <div className="col-9 mx-auto">
+        <Dashboard />
+      </div>
     </>
   );
 }

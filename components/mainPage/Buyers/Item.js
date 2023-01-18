@@ -4,6 +4,7 @@ import styles from "components/mainPage/Main.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import Verified from "components/mainPage/Buyers/Verified";
+import Link from "next/link";
 
 const Item = () => {
   const [more, setMore] = useState(false);
@@ -12,13 +13,17 @@ const Item = () => {
   };
   return (
     <>
-      <div className="d-flex me-5 align-items-center">
-        <span className={`fi fi-gr ${styles.flag}`}></span>
-        <div className="d-flex ms-4 me-auto">
-          <h2 className={`${styles.proRate} ms-1`}>Wanted :</h2>
-          <h2 className={`${styles.proRate} ms-1`}>Brass Honey Scrab</h2>
-        </div>
-       <Verified />
+      <div className="d-flex me-5  ">
+        <Link href="/buylead" className="me-auto  align-items-center">
+          <div className="d-flex  align-items-center ">
+            <span className={`fi fi-gr ${styles.flag}`}></span>
+            <div className="d-flex ms-4 ">
+              <h2 className={`${styles.proRate} ms-1`}>Wanted :</h2>
+              <h2 className={`${styles.proRate} ms-1`}>Brass Honey Scrab</h2>
+            </div>
+          </div>
+        </Link>
+        <Verified />
       </div>
       <div className="d-flex justify-content-between mb-1">
         <span className={styles.buyerSubtitle}>Buyer From India</span>
@@ -60,7 +65,7 @@ const Item = () => {
       </button>
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="staticBackdrop"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
@@ -68,23 +73,23 @@ const Item = () => {
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
               <i
                 className={`${styles.verifiedIcon} me-1 bi bi-check-square-fill`}
               ></i>
-              <h6 class="modal-title fs-6" id="staticBackdropLabel">
+              <h6 className="modal-title fs-6" id="staticBackdropLabel">
                 VERIFIED
               </h6>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               Buying Lead Verification. During the lead verification process,
               our agents speak with each buyer. We discard any leads where:
               Buyer is seemingly fraudulent or ambiguous Value of purchase does
@@ -96,10 +101,10 @@ const Item = () => {
               due diligence before dealing with any buyer or seller you meet on
               our website.
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <button
                 type="button"
-                class="btn btn-primary"
+                className="btn btn-primary"
                 data-bs-dismiss="modal"
               >
                 Ok
