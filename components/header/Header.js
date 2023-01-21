@@ -26,7 +26,7 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <Link href="/" className="me-auto">
               <ul className="navbar-nav  mb-2 mb-lg-0">
-                <Image src={logo} placeholder="blur" width={152} height={50} />
+                <Image src={logo} placeholder="blur" alt="logo" width={152} height={50} />
               </ul>
             </Link>
 

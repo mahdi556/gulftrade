@@ -1,9 +1,55 @@
 import styles from "components/user/User.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { useContext, useState } from "react";
+import { toast } from "react-toastify";
+import AuthContext from "context/AuthContext";
+import { Countries } from "components/staticData/Country";
+import { BusinessType, AnnualSales } from "components/staticData/Business";
 
 const SignUp = () => {
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [c_password, setC_Password] = useState("");
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+    c_password: "",
+    name: "",
+    companyName: "",
+    postalAddress: "",
+    city: "",
+    postalCode: "",
+    state: "",
+    country_id: "",
+    contactPerson: "",
+    designation: "",
+    cellphone: "",
+    landline: "",
+    fax: "",
+    website: "",
+    yearEstablished: "",
+    certifications: "",
+    supplierOf: "",
+    buyerOf: "",
+    services: "",
+    businessId: "",
+    annualSalesId: "",
+  });
+  const { register } = useContext(AuthContext);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // if (userName == "" || password == "" || c_password == "") {
+    //   toast.error("all fildes is required");
+    //   return;
+    // }
+    // if (password !== c_password) {
+    //   toast.error("password do not match");
+    //   return;
+    // }
+    register(data);
+  };
   return (
     <>
       <div className="col-12">
@@ -24,197 +70,308 @@ const SignUp = () => {
               <div className={`${styles.titleCard} mt-2 mb-4`}>
                 <h4 className="titr">Create your Login</h4>
               </div>
-              <div className="form-group col-6 mb-3">
-                <label className="control-label mb-1" for="">
-                  User Name
-                </label>
-                <input className="form-control" />
-              </div>
-              <div className="form-group col-6 mb-3">
-                <label className="control-label mb-1" for="">
-                  Password
-                </label>
-                <input className="form-control" />
-              </div>
-              <div className="form-group col-6 mb-3">
-                <label className="control-label mb-1" for="">
-                  Confirm Password
-                </label>
-                <input className="form-control" />
-              </div>
-              <div className={`${styles.titleCard} mt-3 mb-4`}>
-                <h4 className="titr">Your Contact Details</h4>
-              </div>
-              <div className="row">
-                <div className="form-group col-12 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Your Company Name
+              <form onSubmit={(e) => handleSubmit(e)}>
+                <div className="form-group col-6 mb-3">
+                  <label htmlFor="username" className="control-label mb-1">
+                    User Name
                   </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-12 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Postal Address
-                  </label>
-                  <textarea
+                  <input
                     className="form-control"
-                    rows="3"
-                    cols=""
-                  ></textarea>
+                    id="username"
+                    onChange={(e) => setData({ ...data, email: e.target.value })}
+                    type="email"
+                  />
                 </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    City
+                <div className="form-group col-6 mb-3">
+                  <label className="control-label mb-1" htmlFor="password">
+                    Password
                   </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Zip/Postal Code
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    State/ Province
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Country
-                  </label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Select Your Country</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Contact Person
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Designation / Position in the Company
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-12 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Email Address
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-12 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Mobile Number
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-12 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Landline/Fixedline Number(Country Code -Area Code - Number)
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Fax Number
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Website Address
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Year established
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Certifications Your Company Received
-                  </label>
-                  <input className="form-control" />
-                </div>
-                <div className="form-group col-12 mb-4">
-                  <label className="control-label mb-1" for="">
-                    We are Supplier of:
-                  </label>
-                  <textarea
+                  <input
                     className="form-control"
-                    rows="3"
-                    cols=""
-                  ></textarea>
+                    id="password"
+                    onChange={(e) => setData({ ...data, password: e.target.value })}
+                  />
                 </div>
-                <div className="form-group col-12 mb-4">
-                  <label className="control-label mb-1" for="">
-                    We are Buyer of:
+                <div className="form-group col-6 mb-3">
+                  <label className="control-label mb-1" htmlFor="c_password">
+                    Confirm Password
                   </label>
-                  <textarea
+                  <input
                     className="form-control"
-                    rows="3"
-                    cols=""
-                  ></textarea>
+                    id="c_password"
+                    onChange={(e) => setData({ ...data, c_password: e.target.value })}
+                  />
                 </div>
-                <div className="form-group col-12 mb-4">
-                  <label className="control-label mb-1" for="">
-                    We are Provide the following trade services:
-                  </label>
-                  <textarea
-                    className="form-control"
-                    rows="3"
-                    cols=""
-                  ></textarea>
+                <div className={`${styles.titleCard} mt-3 mb-4`}>
+                  <h4 className="titr">Your Contact Details</h4>
                 </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Your Primary Business:
-                  </label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Select Your Country</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>{" "}
+                <div className="row">
+                  <div className="form-group col-12 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Your Name
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, name: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-12 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Your Company Name
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, companyName: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-12 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Postal Address
+                    </label>
+                    <textarea
+                      className="form-control"
+                      rows="3"
+                      cols=""
+                      onChange={(e) =>
+                        setData({ ...data, postalAddress: e.target.value })
+                      }
+                    ></textarea>
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      City
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, city: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Zip/Postal Code
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, postalCode: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      State/ Province
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, state: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Country
+                    </label>
+                    <select
+                      className="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option defaultValue>Select Your Country</option>
+                      {Countries.map((item, key) => (
+                        <option
+                          value={item.id}
+                          key={item.id}
+                          onClick={() => setData({ ...data, country_id: item.id })}
+                        >
+                          {item.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Contact Person
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, contactPerson: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Designation / Position in the Company
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, designation: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-12 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Mobile Number
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, cellphone: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-12 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Landline/Fixedline Number(Country Code -Area Code -
+                      Number)
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, landline: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Fax Number
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, fax: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Website Address
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, website: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Year established
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, yearEstablished: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Certifications Your Company Received
+                    </label>
+                    <input
+                      className="form-control"
+                      onChange={(e) =>
+                        setData({ ...data, certifications: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div className="form-group col-12 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      We are Supplier of:
+                    </label>
+                    <textarea
+                      className="form-control"
+                      rows="3"
+                      cols=""
+                      onChange={(e) =>
+                        setData({ ...data, supplierOf: e.target.value })
+                      }
+                    ></textarea>
+                  </div>
+                  <div className="form-group col-12 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      We are Buyer of:
+                    </label>
+                    <textarea
+                      className="form-control"
+                      rows="3"
+                      cols=""
+                      onChange={(e) =>
+                        setData({ ...data, buyerOf: e.target.value })
+                      }
+                    ></textarea>
+                  </div>
+                  <div className="form-group col-12 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      We are Provide the following trade services:
+                    </label>
+                    <textarea
+                      className="form-control"
+                      rows="3"
+                      cols=""
+                      onChange={(e) =>
+                        setData({ ...data, services: e.target.value })
+                      }
+                    ></textarea>
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Your Primary Business:
+                    </label>
+                    <select
+                      className="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option defaultValue>Select on option</option>
+                      {BusinessType.map((item, key) => (
+                        <option
+                          value={item.id}
+                          key={item.id}
+                          onClick={() => setData({ ...data, businessId: item.id })}
+                        >
+                          {item.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="form-group col-6 mb-4">
+                    <label className="control-label mb-1" htmlFor="">
+                      Your approx Annual Sales:
+                    </label>
+                    <select
+                      className="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option defaultValue>Select one option</option>
+                      {AnnualSales.map((item, key) => (
+                        <option
+                          value={item.id}
+                          key={item.id}
+                          onClick={() => setData({ ...data, annualSalesId: item.id })}
+                        >
+                          {item.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="d-flex mb-5">
+                    <button
+                      className="btn btn-primary bg-siteBlue mx-auto"
+                      type="submit"
+                    >
+                      Register
+                    </button>
+                  </div>
                 </div>
-                <div className="form-group col-6 mb-4">
-                  <label className="control-label mb-1" for="">
-                    Your approx Annual Sales:
-                  </label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Select Your Country</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>{" "}
-                </div>
-                <div className="d-flex mb-5">
-                  <button
-                    className="btn btn-primary bg-siteBlue mx-auto"
-                    type=""
-                  >
-                    Register
-                  </button>
-                </div>
-              </div>
+              </form>
             </div>
             <div className="col-4 ps-4">
               <div className={`${styles.loginCard} d-flex flex-column mt-4 `}>
