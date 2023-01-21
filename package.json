@@ -15,9 +15,11 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@next/font": "13.1.1",
     "@react-pdf/renderer": "^3.0.2",
+    "@tinymce/tinymce-react": "^4.3.0",
     "bootstrap": "^5.3.0-alpha1",
     "bootstrap-icons": "^1.10.3",
     "flag-icons": "^6.6.6",
+    "fs-extra": "^11.1.0",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-bootstrap": "^2.7.0",
@@ -25,6 +27,7 @@
     "react-google-recaptcha": "^2.1.0",
     "react-modal": "^3.16.1",
     "react-multi-carousel": "^2.8.2",
-    "rsuite": "^5.24.0"
+    "rsuite": "^5.24.0",
+    "tinymce": "^6.3.1"
   }
 }

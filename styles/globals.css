@@ -64,6 +64,9 @@ a {
 .siteBlue {
   color: #00a9ea;
 }
+.bg-siteBlue {
+  background-color: #00a9ea;
+}
 .borderBottom {
   border-bottom: #dddddd 1px solid;
 }
@@ -85,3 +88,8 @@ small{
   color: #00a9ea;
   font-weight: 100;
 }
+.form-control{
+  border: 1px solid #ccc;
+  border-radius: 1px;
+}
+ 
