@@ -93,3 +93,7 @@ small{
   border-radius: 1px;
 }
  
+.form-control::placeholder {
+  font-size: 13px;
+  color: #888;
+}

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Dashboard from "components/user/Dashboard";
 import SearchBar from "components/search/SearchBar";
+import Link from "next/link";
 export default function User() {
   return (
     <>
@@ -11,6 +12,23 @@ export default function User() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SearchBar />
+      <div className="col-8">
+        <h3>Please Verify Your Email</h3>
+        <span>your almost there! we sent an email to</span>
+        <span>mahdihaghighati@gmail.com</span>
+        <div>
+          Just click on the link in the email to complete your signup.
+          <br />
+          if you need to see it,you may need to <b>check your spam </b>folder
+          <br />
+          <br />
+          Still cant find the email?
+        </div>
+        <button type="">Resend Email</button>
+        <div>
+          Need help? <Link href="#">Contact us</Link>
+        </div>
+      </div>
       <div className="col-9 mx-auto">
         <Dashboard />
       </div>

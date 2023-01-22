@@ -28,3 +28,17 @@
   font-size: 13px;
   text-align: justify;
 }
+
+.requiredFiled::after{
+  content: '*This field is required' ;
+  color: #dc3545;
+  font-size: 13px;
+}
+.requiredFiled > input , .requiredFiled > select, .requiredFiled > textarea {
+ border: #dc3545 1px solid !important;
+}
+
+.flag {
+  font-size: 12px;
+  z-index: -1 !important;
+}

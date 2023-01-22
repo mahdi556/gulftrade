@@ -1,13 +1,14 @@
 import { createContext, useState } from "react";
 const AuthContext = createContext();
 import { useRouter } from "next/router";
+// import { handleError } from "lib/helper";
+import { toast } from "react-toastify";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-
 
   const login = async ({ email, password }) => {
     console.log(email, password);
@@ -19,12 +20,15 @@ export const AuthProvider = ({ children }) => {
     const errors = [];
     Object.keys(message).map((key) => {
       message[key].map((e) => {
-        errors.push(e);
+        // errors.push(e);
+        toast.error(e);
       });
     });
-    return errors.join();
+    return;
+    // errors.join();
   };
   const register = async (user) => {
+    setLoading(true);
     const res = await fetch("/api/auth/register", {
       method: "POST",
       headers: {
@@ -37,9 +41,11 @@ export const AuthProvider = ({ children }) => {
 
     if (res.ok) {
       setLoading(false);
-      router.push("/");
+      router.push("/user/dashboard");
     } else {
-      setError(handleError(data.message));
+      // setError(handleError(data.message));
+      toast.error(handleError(data.message));
+      console.log(data.message);
       setLoading(false);
     }
 
