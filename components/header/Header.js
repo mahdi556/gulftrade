@@ -6,8 +6,12 @@ import Call from "./Call";
 import ForBuers from "./ForBuyers";
 import ForSuppliers from "./ForSuppliers";
 import Help from "./Help";
-import SignIn from "./SignIn";
+import SignIn from "components/header/SignIn";
+import AuthContext from "context/AuthContext";
+import { useContext } from "react";
+
 const Header = () => {
+  const{user} = useContext(AuthContext);
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary bg-white">
@@ -104,7 +108,10 @@ const Header = () => {
                     aria-expanded="false"
                   >
                     <i className="bi bi-person-fill me-2"></i>
-                    Sign In
+                    {
+                      user ?
+                      user.name :'Sign In'
+                    }
                     <i
                       className={`${styles.btnNavCaret} bi bi-caret-down-fill ms-2`}
                     ></i>

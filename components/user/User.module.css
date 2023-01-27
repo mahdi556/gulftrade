@@ -1,44 +1,85 @@
-.newPrCard{
+.newPrCard {
   border: 1px solid #d8d8d8;
 }
-.titleCard{
+.titleCard {
   border-bottom: 1px solid #d8d8d8;
 }
-.membershipTitle{
+.membershipTitle {
   color: orange;
   font-weight: 700;
   outline: none;
   font-size: 15px;
   white-space: nowrap;
 }
-.loginCard{
+.loginCard {
   border: 1px solid #ddd;
-
 }
-.loginCardHead{
+.loginCardHead {
   background-color: #f5f5f5;
   border-bottom: 1px solid #ddd;
+}
+.loginCardHead2 {
+  background-color: #3a769b;
+  border-bottom: 1px solid #ddd;
+}
 
-}
-.loginCardTitle{
-  font-size: 14px;
+.loginCardTitle {
+  font-size: 15px;
   font-weight: 400;
-}
-.loginCardBody{
+  vertical-align: middle;
+ }
+.loginCardBody {
   font-size: 13px;
   text-align: justify;
 }
+.loginCardBody1 {
+  font-size: 13px;
+  text-align: justify;
+  line-height: 1rem;
+}
 
-.requiredFiled::after{
-  content: '*This field is required' ;
+.requiredFiled::after {
+  content: "*This field is required";
   color: #dc3545;
   font-size: 13px;
 }
-.requiredFiled > input , .requiredFiled > select, .requiredFiled > textarea {
- border: #dc3545 1px solid !important;
+.requiredFiled > input,
+.requiredFiled > select,
+.requiredFiled > textarea {
+  border: #dc3545 1px solid !important;
 }
 
 .flag {
   font-size: 12px;
   z-index: -1 !important;
+}
+.veBox {
+  background-color: #fff;
+  /* border: #ccc 1px solid; */
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  border-radius: 10px;
+}
+.veTitr {
+  font-size: 18px;
+}
+.veDis {
+  font-size: 14px;
+  color: #555;
+}
+.inputLoginForm {
+  border-left-style: none !important;
+}
+.inputLoginForm:focus {
+  box-shadow: none;
+}
+.inputLoginForm::placeholder {
+  font-size: 17px;
+}
+.Title1{
+  font-size: 18px;
+  font-weight: 400;
+}
+.fs15{
+  font-size: 14px;
 }

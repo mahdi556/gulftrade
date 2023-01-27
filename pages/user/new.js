@@ -2,6 +2,7 @@ import Head from "next/head";
 import Dashboard from "components/user/Dashboard";
 import SearchBar from "components/search/SearchBar";
 import SignUp from "components/user/SignUp";
+
 export default function NewUser() {
   return (
     <>

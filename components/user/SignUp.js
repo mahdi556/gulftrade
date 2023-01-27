@@ -549,7 +549,7 @@ const SignUp = () => {
                   </ul>
                   <div className="d-flex flex-column   align-items-center mb-3">
                     <b>Already A Member ?</b>
-                    <Link href="#">
+                    <Link href="/user/login">
                       <button
                         className="btn  btn-success  border border-0"
                         type=""

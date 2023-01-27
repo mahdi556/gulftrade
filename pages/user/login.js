@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Dashboard from "components/user/Dashboard";
 import SearchBar from "components/search/SearchBar";
-import VerifyEmail from "components/user/VerifyEmail";
-export default function User() {
+import SignUp from "components/user/SignUp";
+import Login from "components/user/Login";
+
+export default function NewUser() {
   return (
     <>
       <Head>
@@ -11,11 +13,7 @@ export default function User() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SearchBar />
-      <VerifyEmail />
-      <div className="col-9 mx-auto">
-        <Dashboard />
-      </div>
+      <Login />
     </>
   );
 }

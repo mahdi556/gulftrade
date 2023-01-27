@@ -14,7 +14,9 @@ const Contact = () => {
           <label className="control-label mb-1" for="">
             Message
           </label>
-          <textarea className="form-control" rows="5" cols=""></textarea>
+          <textarea className="form-control" rows="5" cols=""
+          onChange={()=>{}}
+          ></textarea>
         </div>
         <div className="form-group mt-3">
           <label className="control-label mb-1" for="">
@@ -26,22 +28,28 @@ const Contact = () => {
           <label className="control-label mb-1" for="">
             Your Name
           </label>
-          <input className="form-control" type="" name="" value="" />
+          <input className="form-control" type="" name="" value="" 
+                    onChange={()=>{}}
+                    />
         </div>
         <div className="form-group mt-3">
           <label className="control-label mb-1" for="">
             Your Email
           </label>
-          <input className="form-control" type="" name="" value="" />
+          <input className="form-control" type="" name="" value="" 
+                    onChange={()=>{}}
+                    />
         </div>
         <div className="form-group mt-3">
           <label className="control-label mb-1" for="">
             Phone(Contry And Area Code)
           </label>
-          <input className="form-control" type="" name="" value="" />
+          <input className="form-control" type="" name="" value="" 
+                    onChange={()=>{}}
+                    />
         </div>
         <div className="form-group mt-3">
-          <label className="control-label mb-1" for="">
+          <label className="control-label mb-1" htmlFor="">
             Country
           </label>
           <select className="form-select ">
@@ -60,7 +68,9 @@ const Contact = () => {
           <label className="control-label mb-1" for="">
             Please enter the following text in the box below
           </label>
-          <input className="form-control" type="" name="" value="" />
+          <input className="form-control" type="" name="" value="" 
+           
+          />
         </div>
         {/* <ReCAPTCHA
           sitekey="6LfM5PYjAAAAAKe30rzGSkkvSVzYibud01B3biFA"
